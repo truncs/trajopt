@@ -20,6 +20,7 @@ ENV OPENTHREADS_LIB_DIR="/usr/local/lib64:/usr/local/lib"
 ENV PATH="$OPENTHREADS_LIB_DIR:$PATH"
 
 WORKDIR /root/
+
 RUN git clone https://github.com/truncs/trajopt.git \
     && mkdir /root/trajopt/build && cd /root/trajopt/build \
     && cmake .. \

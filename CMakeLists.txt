@@ -38,7 +38,7 @@ enable_testing()
 
 option(BUILD_CLOUDPROC "build point cloud processing stuff" OFF)
 option(BUILD_SANDBOX "build sandbox programs" ON)
-option(BUILD_HUMANOIDS "build humanoids stuff" OFF)
+option(BUILD_HUMANOIDS "build humanoids stuff" ON)
 option(BUILD_SENSORSIM "build sensor simulation" OFF)
 
 include("${CMAKE_SOURCE_DIR}/cmake/boost-python.cmake")
