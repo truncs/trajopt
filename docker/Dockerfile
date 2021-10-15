@@ -3,7 +3,7 @@ FROM nvidia/cudagl:11.2.0-devel-ubuntu16.04
 RUN apt-get update && apt-get install -y --no-install-recommends \
     sudo git lsb-release
 
-RUN apt-get install libpcl-dev
+RUN apt-get install -y --no-install-recommends libpcl-dev
 
 WORKDIR /root/
 
