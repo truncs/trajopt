@@ -3,6 +3,8 @@ FROM nvidia/cudagl:11.2.0-devel-ubuntu16.04
 RUN apt-get update && apt-get install -y --no-install-recommends \
     sudo git lsb-release
 
+RUN apt-get install libpcl-dev
+
 WORKDIR /root/
 
 RUN git clone https://github.com/crigroup/openrave-installation
@@ -26,5 +28,4 @@ RUN git clone https://github.com/truncs/trajopt.git \
     && cmake .. \
     && make -j
 
-CMD ["/bin/bash"]
-
+ENV PYTHONPATH="$PYTHONPATH:/root/trajopt/build/lib/:/root/trajopt/src/cloudproc/"
